@@ -9,8 +9,8 @@ draw = function () {
 
   if (mouseIsPressed) bubbles.push(new Bubble (mouseX, mouseY));
 
-  for (var i = 0; i < bubbles.length; ++i){
-    bubbles[i].update();
-    bubbles[i].display();
-  }
+  bubbles.forEach(function updateAndDisplay(bubble) {
+    bubble.update();
+    bubble.display();
+  });
 };
