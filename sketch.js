@@ -1,26 +1,16 @@
-var bubblepit = [];
+var bubbles = [];
 
-//var myBubble = new Bubble(100, 100);
-//myBubble.speed.x = 2;
-//myBubble.speed.y = 2;
-
-var setup = function () {
+setup = function () {
   createCanvas(600, 400);
-//  iterateWithForLoop(500);
 };
 
-var draw = function () {
-  background(100);
-  bubblepit.forEach(function updateAndDisplay(bubble) {
-    bubble.update();
-    bubble.display();
-    });
-    if (mouseIsPressed) bubblepit.push(new Bubble(mouseX, mouseY));
+draw = function () {
+  background(0);
+
+  if (mouseIsPressed) bubbles.push(new Bubble (mouseX, mouseY));
+
+  for (var i = 0; i < bubbles.length; ++i){
+    bubbles[i].update();
+    bubbles[i].display();
+  }
 };
-
-
-
-//var iterateWithForLoop = function (numberOfBubbles) {
-  //for (var i = 0; i < numberOfBubbles; ++i) {
-    //bubblepit.push (new Bubble (random(0, width-10), random(10, height - 10)));
-    //updateAndDisplay(array[i]);
