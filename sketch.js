@@ -6,7 +6,7 @@ var bubblepit = [];
 
 setup = function () {
   createCanvas(600, 400);
-  iterateWithForLoop(500);
+  iterateWithForLoop(5000);
 };
 
 draw = function () {
