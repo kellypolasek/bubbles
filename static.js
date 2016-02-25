@@ -1,9 +1,9 @@
-var Bubble = function (x, y) {
+var Static = function (x, y) {
   this.x = x;
   this.y = y;
 };
 
-Bubble.prototype = {
+Static.prototype = {
 
   radius: 5,
 
@@ -15,7 +15,7 @@ Bubble.prototype = {
 
   display: function () {
     noStroke();
-    fill(102, 217, 255, 100);
+    fill(250);
     rect(this.x, this.y, this.radius, this.radius);
   }
 

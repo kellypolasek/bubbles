@@ -1,8 +1,4 @@
-var bubblepit = [];
-
-//var myBubble = new Bubble(100, 100);
-//myBubble.speed.x = 2;
-//myBubble.speed.y = 2;
+var dotpit = [];
 
 setup = function () {
   createCanvas(600, 400);
@@ -10,17 +6,17 @@ setup = function () {
 };
 
 draw = function () {
-  background(100);
+  background(0);
 
-  bubblepit.forEach(function updateAndDisplay(bubble) {
-    bubble.display();
-    bubble.update();
+  dotpit.forEach(function updateAndDisplay(Static) {
+    Static.display();
+    Static.update();
   });
 };
 
-var iterateWithForLoop = function (numberOfBubbles) {
-  for (var i = 0; i < numberOfBubbles; ++i) {
-    bubblepit.push (new Bubble (random(0, width-10), random(10, height - 10)));
+var iterateWithForLoop = function (numberOfStatic) {
+  for (var i = 0; i < numberOfStatic; ++i) {
+    dotpit.push (new Static (random(0, width-10), random(10, height - 10)));
     //updateAndDisplay(array[i]);
   }
 };
